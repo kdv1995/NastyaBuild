@@ -378,7 +378,7 @@ h6 {
     width: 1.875rem;
     height: 1.125rem;
     cursor: pointer;
-    z-index: 5;
+    z-index: 7;
   }
   .icon-menu span, .icon-menu::before, .icon-menu::after {
     content: "";
@@ -387,7 +387,7 @@ h6 {
     position: absolute;
     width: 100%;
     height: 0.125rem;
-    background-color: #ebe5e5;
+    background-color: white;
   }
   .icon-menu::before {
     top: 0;
@@ -411,6 +411,9 @@ h6 {
   }
 }
 
+.menu__body {
+  display: none;
+}
 .section__container {
   position: relative;
 }
@@ -444,6 +447,11 @@ h6 {
     line-height: calc(1.5rem + 1.5625 * (100vw - 20rem) / 55);
   }
 }
+@media (max-width: 49.25em) {
+  .info-about__greet {
+    text-align: center;
+  }
+}
 .info-about__photo {
   position: absolute;
   left: 980px;
@@ -472,6 +480,11 @@ h6 {
 @supports not (line-height: clamp( 3.75rem , 2.8863636364rem  +  4.3181818182vw , 6.125rem )) {
   .info-about__name {
     line-height: calc(3.75rem + 2.375 * (100vw - 20rem) / 55);
+  }
+}
+@media (max-width: 49.25em) {
+  .info-about__name {
+    text-align: center;
   }
 }
 .info-about__profession {
@@ -505,6 +518,11 @@ h6 {
     line-height: calc(2.5rem + 0.5625 * (100vw - 20rem) / 55);
   }
 }
+@media (max-width: 49.25em) {
+  .info-about {
+    text-align: center;
+  }
+}
 
 .social-info {
   display: flex;
@@ -528,6 +546,13 @@ h6 {
 @supports not (padding-bottom: clamp( 1.5625rem , 1.2215909091rem  +  1.7045454545vw , 2.5rem )) {
   .social-info {
     padding-bottom: calc(1.5625rem + 0.9375 * (100vw - 20rem) / 55);
+  }
+}
+@media (max-width: 49.25em) {
+  .social-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .social-info__links_background_behance {
