@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220210181450">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link"></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header-logo logo-header">
+					<a href="" class="logo-header__link">
+						<svg width="77px" height="65px">
+							<use class="logo-header__link_ak" width="77px" height="65px" href="img/symbol-defs.svg#icon-ak-logo"></use>
+						</svg>
+					</a>
+				</div>
+				<nav class="nav">
+					<ul class="menu-nav main-menu menu-main">
+						<li class="menu-main__item">
+							<a href="" class="menu-main__links">Home</a>
+						</li>
+						<li class="menu-main__item">
+							<a href="" class="menu-main__links">About</a>
+						</li>
+						<li class="menu-main__item">
+							<a href="" class="menu-main__links">Skills</a>
+						</li>
+						<li class="menu-main__item">
+							<a href="" class="menu-main__links">Portfolio</a>
+						</li>
+						<li class="menu-main__item">
+							<a href="" class="menu-main__links_radius">CONTACT ME</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header-call">
+					<a href="tel:+380 68 341 2986" class="header-call__link">
+						<svg width="28px" height="26px" class="header-call__link_background">
+							<use class="header-call__link_fill" href="img/symbol-defs.svg#icon-mobile"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="section section-about">
+				<div class="section__container">
+					<div class="about-info info-about">
+						<h1 class="info-about__greet">Hello, I am</h1>
+						<p class="info-about__name">Anastasiia Kurka</p>
+						<p class="info-about__profession">
+							Graphic Designer with 2 years of experience
+						</p>
+						<div class="info-about__photo">
+							<picture><source srcset="img/93028026_250799066103968_2374714991022523648_n.webp" type="image/webp"><img class="info-about__img" width="220px" height="330x" src="img/93028026_250799066103968_2374714991022523648_n.jpeg" alt="" /></picture>
+						</div>
+					</div>
+					<div class="info-social social-info">
+						<ul class="social-info">
+							<li class="social-info__items">
+								<a href="" class="social-info__links">
+									<svg class="social-info__links_background_behance" width="60px" height="60px">
+										<use class="social-info__links_behance" width="30px" height="19px" href="img/symbol-defs.svg#icon-behance"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social-info__items">
+								<a href="https://www.instagram.com/ana_designere/" class="social-info__links">
+									<svg class="social-info__links_background_instagram" width="60px" height="60px">
+										<use class="social-info__links_instagram" width="60px" height="60px" href="img/symbol-defs.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social-info__items">
+								<a href="" class="social-info__links">
+									<svg class="social-info__links_background_pinterest" width="60px" height="60px">
+										<use class="social-info__links_pinterest" width="60px" height="60px" href="img/symbol-defs.svg#icon-pinterest"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="works__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="works__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/ux-design.webp" type="image/webp"><img class="swiper-slide__ux" src="img/ux-design.jpg" alt="UX-Ui" /></picture>
+							</div>
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/illustration.webp" type="image/webp"><img class="swiper-slide__illustrator" src="img/illustration.jpg" alt="Illustration" /></picture>
+							</div>
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/instagram.webp" type="image/webp"><img class="swiper-slide__insta" src="img/instagram.jpg" alt="Instagram" /></picture>
+							</div>
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/illustration.webp" type="image/webp"><img class="swiper-slide" src="img/illustration.jpg" alt="Logo" /></picture>
+							</div>
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/logo.webp" type="image/webp"><img class="swiper-slide__logo" src="img/logo.jpg" alt="" /></picture>
+							</div>
+							<div class="works__slide swiper-slide">
+								<picture><source srcset="img/ux-design.webp" type="image/webp"><img src="img/ux-design.jpg" alt="" /></picture>
+							</div>
+						</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-pagination"></div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+						<!-- Если нужен скролбар -->
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+	<script src="js/app.min.js?_v=20220210181450"></script>
+</body>
+
+</html>
