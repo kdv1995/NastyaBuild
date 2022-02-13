@@ -161,6 +161,81 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+
+.popup-show body::after {
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: #eee;
+  padding: 20px;
+  width: 100%;
+  min-height: 31.25rem;
+  max-width: 900px;
+  border-radius: 20px;
+}
+.lock .popup__content {
+  visibility: visible;
+}
+
+.popup__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -306,14 +381,14 @@ h6 {
   line-height: 1.3125rem;
   color: #ffffff;
 }
-@supports (font-size: clamp( 0.875rem , 0.0382281553rem  +  1.6990291262vw , 1.3125rem )) {
+@supports (font-size: clamp( 0.875rem , 0.5163834951rem  +  0.7281553398vw , 1.0625rem )) {
   .menu-main__links {
-    font-size: clamp( 0.875rem , 0.0382281553rem  +  1.6990291262vw , 1.3125rem );
+    font-size: clamp( 0.875rem , 0.5163834951rem  +  0.7281553398vw , 1.0625rem );
   }
 }
-@supports not (font-size: clamp( 0.875rem , 0.0382281553rem  +  1.6990291262vw , 1.3125rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.5163834951rem  +  0.7281553398vw , 1.0625rem )) {
   .menu-main__links {
-    font-size: calc(0.875rem + 0.4375 * (100vw - 49.25rem) / 25.75);
+    font-size: calc(0.875rem + 0.1875 * (100vw - 49.25rem) / 25.75);
   }
 }
 @media (max-width: 49.25em) {
@@ -487,7 +562,7 @@ h6 {
 }
 
 .section-about {
-  padding: 3.75rem 0px;
+  padding: 2.5rem 0px;
 }
 
 .info-about__greet {
@@ -526,7 +601,7 @@ h6 {
   bottom: 413px;
 }
 .info-about__name {
-  padding: 2.5rem 0px 0px 0px;
+  padding: 1.0625rem 0px 0px 0px;
   font-weight: bold;
   color: #ffffff;
 }
@@ -648,6 +723,52 @@ h6 {
 }
 .social-info__links_pinterest {
   fill: #ffffff;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@supports (padding-top: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__container {
+    padding-top: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (padding-top: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__container {
+    padding-top: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55);
+  }
+}
+@supports (padding-bottom: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__container {
+    padding-bottom: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (padding-bottom: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__container {
+    padding-bottom: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55);
+  }
+}
+.footer__quote {
+  color: #fff;
+  line-height: 1.5625rem;
+}
+@supports (font-size: clamp( 0.875rem , 0.8068181818rem  +  0.3409090909vw , 1.0625rem )) {
+  .footer__quote {
+    font-size: clamp( 0.875rem , 0.8068181818rem  +  0.3409090909vw , 1.0625rem );
+  }
+}
+@supports not (font-size: clamp( 0.875rem , 0.8068181818rem  +  0.3409090909vw , 1.0625rem )) {
+  .footer__quote {
+    font-size: calc(0.875rem + 0.1875 * (100vw - 20rem) / 55);
+  }
+}
+.footer__span {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, red, orange, #d162d1);
 }
 .swiper {
   overflow: hidden;

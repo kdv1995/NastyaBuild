@@ -4055,7 +4055,7 @@
             slidesPerView: 1,
             spaceBetween: 0,
             autoHeight: true,
-            speed: 800,
+            speed: 450,
             touchRatio: 0,
             simulateTouch: false,
             loop: true,
@@ -4063,7 +4063,7 @@
             lazy: true,
             effect: "fade",
             autoplay: {
-                delay: 3e3,
+                delay: 2500,
                 disableOnInteraction: false
             },
             pagination: {
@@ -4084,17 +4084,25 @@
                     spaceBetween: 0,
                     autoHeight: true
                 },
-                768: {
+                468: {
                     slidesPerView: 2,
-                    spaceBetween: 20
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                    autoHeight: true
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 20
+                    spaceBetween: 35,
+                    autoHeight: true
                 },
                 1268: {
                     slidesPerView: 4,
-                    spaceBetween: 30
+                    spaceBetween: 45,
+                    autoHeight: true
                 }
             },
             on: {}
