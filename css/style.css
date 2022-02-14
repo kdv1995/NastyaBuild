@@ -239,7 +239,7 @@ body::after {
 .spollers {
   display: none;
 }
-@media (max-width: 20em) {
+@media (max-width: 29.99875em) {
   .spollers {
     display: grid;
     gap: 15px;
@@ -250,6 +250,13 @@ body::after {
   }
   .spollers:last-child {
     padding: 0.625rem 0px 0px 0px;
+  }
+  .spollers__title_another {
+    display: block;
+    padding: 0.875rem 0;
+    font-size: 2.375rem;
+    color: #fff;
+    text-align: center;
   }
 }
 
@@ -815,19 +822,6 @@ body::after {
 }
 .social-info__links_pinterest {
   fill: #ffffff;
-}
-
-.faq-block {
-  display: none;
-}
-@media (max-width: 20em) {
-  .faq-block {
-    display: block;
-    padding: 0.875rem 0;
-    font-size: 2.375rem;
-    color: #fff;
-    text-align: center;
-  }
 }
 
 .footer__container {
