@@ -818,10 +818,16 @@ body::after {
 }
 
 .faq-block {
-  padding: 0.875rem 0;
-  font-size: 2.375rem;
-  color: #fff;
-  text-align: center;
+  display: none;
+}
+@media (max-width: 20em) {
+  .faq-block {
+    display: block;
+    padding: 0.875rem 0;
+    font-size: 2.375rem;
+    color: #fff;
+    text-align: center;
+  }
 }
 
 .footer__container {
