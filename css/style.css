@@ -236,6 +236,83 @@ body::after {
   align-items: center;
 }
 
+.spollers {
+  display: none;
+}
+@media (max-width: 20em) {
+  .spollers {
+    display: grid;
+    gap: 15px;
+    color: #fff;
+  }
+  .spollers:not(:last-child) {
+    padding: 0.625rem 0px 0.9375rem 0px;
+  }
+  .spollers:last-child {
+    padding: 0.625rem 0px 0px 0px;
+  }
+}
+
+.spollers__item {
+  font-size: 1rem;
+}
+
+.spollers__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  border: 1px solid #eee;
+  padding: 0.625rem 0.3125rem;
+  border-radius: 0.3125rem;
+  position: relative;
+}
+._spoller-init .spollers__title {
+  cursor: pointer;
+}
+._spoller-init .spollers__title::before, ._spoller-init .spollers__title::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background-color: white;
+  height: 2px;
+  width: 15px;
+  transition: transform 0.5s ease 0s;
+}
+._spoller-init .spollers__title::before {
+  transform: translate(-75%, -50%) rotate(40deg);
+}
+._spoller-init .spollers__title::after {
+  transform: translate(0, -50%) rotate(-40deg);
+}
+._spoller-init .spollers__title._spoller-active::before {
+  transform: translateX(-75%) rotate(-40deg);
+}
+._spoller-init .spollers__title._spoller-active::after {
+  transform: rotate(40deg);
+}
+
+.spollers__body {
+  font-size: 0.875rem;
+  padding: 0.9375rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #eee;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #ffdede, #e4bc73, red);
+}
+
+[data-showmore-button] span:last-child {
+  display: none;
+}
+._showmore-active [data-showmore-button] span {
+  display: none;
+}
+._showmore-active [data-showmore-button] span:last-child {
+  display: block;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -257,6 +334,26 @@ body::after {
   background: linear-gradient(135deg, #171717 2.88%, #111111 100%);
 }
 
+@supports (padding-top: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem )) {
+  .header {
+    padding-top: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem );
+  }
+}
+@supports not (padding-top: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem )) {
+  .header {
+    padding-top: calc(0.9375rem + 3.125 * (100vw - 20rem) / 55);
+  }
+}
+@supports (padding-bottom: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem )) {
+  .header {
+    padding-bottom: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem );
+  }
+}
+@supports not (padding-bottom: clamp( 0.9375rem , -0.1988636364rem  +  5.6818181818vw , 4.0625rem )) {
+  .header {
+    padding-bottom: calc(0.9375rem + 3.125 * (100vw - 20rem) / 55);
+  }
+}
 @media (max-width: 49.25em) {
   .header {
     display: flex;
@@ -268,24 +365,19 @@ body::after {
   display: flex;
   align-items: center;
 }
-@supports (padding-top: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem )) {
-  .header__container {
-    padding-top: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem );
+@media (max-width: 29.99875em) {
+  .header._header-scroll {
+    position: fixed;
+    top: -50%;
+    background: #272727;
+    width: 100%;
+    z-index: 15;
+    opacity: 0;
   }
-}
-@supports not (padding-top: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem )) {
-  .header__container {
-    padding-top: calc(0.9375rem + 2.9375 * (100vw - 20rem) / 55);
-  }
-}
-@supports (padding-bottom: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem )) {
-  .header__container {
-    padding-bottom: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem );
-  }
-}
-@supports not (padding-bottom: clamp( 0.9375rem , -0.1306818182rem  +  5.3409090909vw , 3.875rem )) {
-  .header__container {
-    padding-bottom: calc(0.9375rem + 2.9375 * (100vw - 20rem) / 55);
+  .header._header-show {
+    top: 0;
+    transition: all 0.3s ease 0s;
+    opacity: 1;
   }
 }
 
@@ -723,6 +815,13 @@ body::after {
 }
 .social-info__links_pinterest {
   fill: #ffffff;
+}
+
+.faq-block {
+  padding: 0.875rem 0;
+  font-size: 2.375rem;
+  color: #fff;
+  text-align: center;
 }
 
 .footer__container {

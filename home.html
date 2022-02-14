@@ -6,21 +6,21 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220213233257" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220214172446" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap&_v=20220213233257"
+    href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap&_v=20220214172446"
     rel="stylesheet"
   /> -->
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header _header-scroll _header-show" data-scroll="150" data-scroll-show="500">
 			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<div class="header__container">
 				<div class="header__menu menu">
@@ -63,13 +63,7 @@
 							<a href="" class="menu-main__links">Skills</a>
 						</li>
 						<li class="menu-main__item">
-							<a href="" class="menu-main__links">Portfolio</a>
-						</li>
-						<li class="menu-main__item">
-							<a href="" class="menu-main__links">Feedback</a>
-						</li>
-						<li class="menu-main__item">
-							<a href="" class="menu-main__links">Offers</a>
+							<a href="#" data-goto="#swiper" class="menu-main__links link">Portfolio</a>
 						</li>
 						<li class="menu-main__item">
 							<a data-popup="#popup" data-popup="#video" data-popup-youtube="6S5Zw2WuyFE" class="menu-main__links_radius">Introduction</a>
@@ -124,10 +118,11 @@
 							</li>
 						</ul>
 					</div>
+
 					<!-- Оболочка слайдера -->
 					<div class="works__slider swiper">
 						<!-- Двигающееся часть слайдера -->
-						<div class="works__wrapper swiper-wrapper">
+						<div class="works__wrapper swiper-wrapper" id="swiper">
 							<!-- Слайд -->
 							<div class="works__slide swiper-slide">
 								<picture><source srcset="img/ux-design.webp" type="image/webp"><img width="292px" height="193px" class="swiper-slide__ux" src="img/ux-design.jpg" alt="UX-Ui" /></picture>
@@ -156,6 +151,45 @@
 						<!-- Если нужен скролбар -->
 						<div class="swiper-scrollbar"></div>
 					</div>
+					<div class="faq-block">
+						<h3 class="faq-block__title">FAQ</h3>
+					</div>
+					<div data-spollers="320,max" class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								Why to choose me?
+							</button>
+							<div class="spollers__body">Professional attitude to work</div>
+						</div>
+					</div>
+					<div data-spollers="320,max" class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								Why to buy your service?
+							</button>
+							<div class="spollers__body">Professional attitude to work</div>
+						</div>
+					</div>
+					<div data-spollers="320,max" class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								What about my qualification?
+							</button>
+							<div class="spollers__body">
+								I'm certified and professional Graphic Designer who has already
+								finished internation Graphic Design course after three month on
+								e-commerce and public projects.
+							</div>
+						</div>
+					</div>
+					<div data-spollers="320,max" class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								Why to choose me?
+							</button>
+							<div class="spollers__body">Any strong skills?</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -178,7 +212,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220213233257"></script>
+	<script src="js/app.min.js?_v=20220214172446"></script>
 </body>
 
 </html>
